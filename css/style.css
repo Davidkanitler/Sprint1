@@ -1,5 +1,5 @@
 body {
-    background-image: url('..img/asa.jpg');
+    background-image: url('../img/minesBackround.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -43,6 +43,17 @@ body {
 }
 
 button {
+    display: inline-block;
+    padding: 15px 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
     cursor: pointer;
 }
 
