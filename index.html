@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="initGame()">
+    <h1>Minesweeper</h1>
+    <div class="mine-alert">
+        <h3>Mine Alert!</h3>
+    </div>
+
+    <div class="introduction">
+        <ul>
+            <li>Please select Lives and Level</li>
+            <li>press 💡 for hints</li>
+            <li>Press 😀 to Restart</li>
+        </ul>
+    </div>
+    <div class="score">
+        <span class="score-title">Best Time:<br></span> Beginner:
+        <span class="beginner">0</span><br> Medium:
+        <span class="medium">0</span><br> Expert:
+        <span class="expert">0</span>
+    </div>
+    <br>
+    <br>
+    <div class="lives">
+        <button class="lives1" onclick="setLives(1)">1 Lives</button>
+        <button class="lives2" onclick="setLives(2)">2 Lives</button>
+        <button class="lives3" onclick="setLives(3)">3 Lives</button>
+    </div>
+
+    <button class="reset-score" onclick="resetBestScores()">Reset Score</button>
+    <br>
+    <br>
+    <div class="level">
+        <button class="level-1" onclick="gameLevel(1)">Beginner</button>
+        <button class="level-2" onclick="gameLevel(2)">Medium</button>
+        <button class="level-3" onclick="gameLevel(3)">Expert</button>
+    </div>
+
+    <div class="hints">
+        <button class="hint1" onclick="getHint(this, 1)">💡</button>
+        <button class="hint2" onclick="getHint(this, 2)">💡</button>
+        <button class="hint3" onclick="getHint(this, 3)">💡</button>
+    </div>
+    <div class="safe-click">
+        <button onclick="safeClick()">Safe-clik: <span>3</span> left</button><br>
+    </div>
+    <button class="undo" onclick="undo()">Undo</button>
+    <br>
+    <br>
+    <div class="timer">
+        <label class="minutes">00</label>
+        <label class="colon">:</label>
+        <label class="seconds">00</label>
+    </div>
+
+    <button class="start" onclick="playAgain()">😀</button>
+    <br>
+    <table class="board" border="1" cellpadding="10">
+        <tbody></tbody>
+    </table>
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
